@@ -1,6 +1,7 @@
-import { LightningElement, track, wire } from 'lwc';
+import { LightningElement, api, track, wire } from 'lwc';
 import getRecentAccounts from '@salesforce/apex/AccountController.getRecentAccounts';
 export default class PToCAssignmentParent extends LightningElement {
+
 
     @track selectedAccountId;
     @track options = [];
