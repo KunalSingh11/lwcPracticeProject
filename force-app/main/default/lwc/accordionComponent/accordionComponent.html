@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-box">
+        <lightning-card title="Accordion" icon-name="standard:groups">
+
+            <lightning-accordion allow-multiple-sections-open>
+                <template for:each={allData} for:item=acc>
+                    <lightning-accordion-section label={acc.Name} key={acc.Id}>
+                        <!-- <template for:each={acc.Contacts} for:item="con">
+                            <lightning-accordion-section label={con.Name} key={con.Id}>
+                            </lightning-accordion-section>
+                        </template> -->
+                        <div class="slds-box">
+                            <lightning-datatable key-field="id" data={acc.Contacts} columns={columnList}
+                                hide-checkbox-column="true" show-row-number-column="false">
+                            </lightning-datatable>
+                        </div>
+                    </lightning-accordion-section>
+                </template>
+            </lightning-accordion>
+
+        </lightning-card>
+    </div>
+</template>
