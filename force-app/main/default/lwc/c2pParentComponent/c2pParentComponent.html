@@ -1,0 +1,8 @@
+<template>
+    <div class="slds-box">
+        <lightning-card title="Parent Component">
+            <p class="slds-p-around_small">String from child: {childString}</p>
+            <c-c2p-child-component onstringchange={handleStringChange}></c-c2p-child-component>
+        </lightning-card>
+    </div>
+</template>
