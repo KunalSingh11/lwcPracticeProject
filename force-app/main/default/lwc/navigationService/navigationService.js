@@ -5,11 +5,21 @@ export default class NavigationService extends NavigationMixin(LightningElement)
     //type = namedPage
 
     navigateToNamedPage() {
-        this[NavigationMixin.Navigation]({
+        this[NavigationMixin.Navigate]({
             type: 'standard__namedPage',
             attributes: {
-                pageName: 'Home'
+                pageName: 'home'
             }
         })
     }
+
+    navigateToNamedPageChatter() {
+        this[NavigationMixin.Navigate]({
+            type: 'standard__namedPage',
+            attributes: {
+                pageName: 'chatter'
+            }
+        })
+    }
+
 }
