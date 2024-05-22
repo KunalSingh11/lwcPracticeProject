@@ -22,4 +22,13 @@ export default class NavigationService extends NavigationMixin(LightningElement)
         })
     }
 
+    navigateToRecordPage() {
+        this[NavigationMixin.Navigate]({
+            type: 'standard__objectPage',
+            attributes: {
+                objectApiName: 'Contact',
+                actionName: 'new'
+            }
+        })
+    }
 }
