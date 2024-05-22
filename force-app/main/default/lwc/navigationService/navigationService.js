@@ -31,4 +31,14 @@ export default class NavigationService extends NavigationMixin(LightningElement)
             }
         })
     }
+
+    navigateToWebPage() {
+        this[NavigationMixin.Navigate]({
+            type: 'standard__webPage',
+            attributes: {
+                url: 'https://www.cognizant.com/in/en'
+            }
+        })
+    }
+
 }
