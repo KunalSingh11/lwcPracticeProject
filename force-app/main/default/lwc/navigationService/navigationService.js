@@ -41,4 +41,13 @@ export default class NavigationService extends NavigationMixin(LightningElement)
         })
     }
 
+    navigateToTabPage() {
+        this[NavigationMixin.Navigate]({
+            type: 'standard__navItemPage',
+            attributes: {
+                apiName: 'lwc_practice'
+            }
+        })
+    }
+
 }
